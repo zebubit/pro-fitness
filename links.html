@@ -112,7 +112,7 @@ svg.i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stro
   $('l-rota').href = A.rotas; $('l-google').href = A.google.perfil; $('l-insta').href = A.instagram;
   if (A.facebook){ $('l-face').href = A.facebook; $('l-face').hidden = false; }
   /* o link do site só aparece quando o site estiver publicado: troque SITE_URL pelo endereço final */
-  var SITE_URL = ''; if (SITE_URL){ $('l-site').href = SITE_URL; $('l-site').hidden = false; }
+  var SITE_URL = 'https://zebubit.github.io/pro-fitness/'; if (SITE_URL){ $('l-site').href = SITE_URL; $('l-site').hidden = false; }
   $('cta-zebubit').href = 'https://wa.me/5534993421500?text=' + encodeURIComponent('Olá! Vim pela bio da Academia Pró Fitness e quero um link da bio premium igual pra mim.');
   var p = new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
   var g = function(t){return p.filter(function(x){return x.type===t})[0].value};
