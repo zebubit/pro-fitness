@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>Academia Pró Fitness Uberaba | Musculação, Funcional e Pilates</title>
+<meta name="description" content="Academia em Uberaba com musculação, treinamento funcional e Pilates. Professores que acompanham você de perto. Agende sua visita pelo WhatsApp.">
+<meta name="robots" content="noindex,nofollow"><!-- DEMONSTRACAO: remover ao publicar de verdade -->
+<meta name="theme-color" content="#06080D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Academia Pró Fitness Uberaba">
+<meta property="og:description" content="Musculação, treinamento funcional e Pilates em Uberaba. Agende sua visita.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HealthClub","name":"Academia Pró Fitness","slogan":"Transformando vidas através do exercício físico","telephone":"+553433144069","image":"img/hero.jpg",
+"address":{"@type":"PostalAddress","streetAddress":"R. Benjamin Bernardino da Costa, 155","addressLocality":"Uberaba","addressRegion":"MG","postalCode":"38035-350","addressCountry":"BR"},
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:00","closes":"11:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"14:00","closes":"21:00"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],
+"sameAs":["https://www.instagram.com/academiaprofitnessoficial/"]}
+</script>
+<style>
+:root{
+  --bg:#06080D; --bg2:#0A0F17; --card:#0E141F; --linha:#1B2536;
+  --txt:#EEF2F7; --mut:#A3AEC0; --blue:#2F80FF; --blue-d:#1B5FD1; --lime:#9BEA2B; --lime-d:#7CC61A; --ink:#06130A;
+  --raio:14px; --sombra:0 18px 50px rgba(0,0,0,.45);
+  --tit:'Barlow Condensed','Arial Narrow',sans-serif; --corpo:'Barlow',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;max-width:100%}
+body{font-family:var(--corpo);font-size:17px;line-height:1.6;background:var(--bg);color:var(--txt);overflow-x:hidden;padding-bottom:84px}
+a[href^="tel:"]{color:inherit}
+img{max-width:100%;display:block}
+.env{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--tit);font-weight:800;line-height:1.02;letter-spacing:.005em;text-transform:uppercase}
+.rotulo{display:inline-flex;align-items:center;gap:12px;font:600 13px/1 var(--corpo);letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+.rotulo::before{content:"";width:28px;height:3px;background:var(--lime);border-radius:2px}
+.titulo{font-size:clamp(36px,6.4vw,64px);margin-bottom:14px}
+.titulo em{font-style:normal;color:var(--lime)}
+.intro{color:var(--mut);max-width:58ch;font-size:18px}
+section{padding:clamp(64px,9vw,112px) 0}
+.alt{background:var(--bg2)}
+svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:2px solid transparent;
+  font:700 16px/1 var(--corpo);letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:transform .18s ease,background .2s,color .2s,border-color .2s,box-shadow .2s;touch-action:manipulation}
+.btn:active{transform:scale(.97)}
+.btn-lime{background:var(--lime);color:var(--ink);box-shadow:0 10px 30px rgba(155,234,43,.28)}
+.btn-lime:hover{background:#B4F55A}
+.btn-line{border-color:rgba(255,255,255,.28);color:var(--txt)}
+.btn-line:hover{border-color:var(--lime);color:var(--lime)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* topo */
+header.topo{position:fixed;inset:0 0 auto 0;z-index:80;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+header.topo.rolou{background:rgba(6,8,13,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--linha)}
+.topo .env{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:74px}
+.marca img{height:46px;width:auto}
+.marca{display:flex;align-items:center;min-height:44px}
+nav.menu{display:none;gap:6px}
+nav.menu a{display:flex;align-items:center;min-height:44px;padding:0 14px;color:var(--mut);text-decoration:none;font-weight:500;font-size:15px;border-radius:999px;transition:color .2s}
+nav.menu a:hover{color:var(--txt)}
+.topo .btn{min-height:46px;padding:0 20px;font-size:15px}
+@media(min-width:1000px){nav.menu{display:flex}}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:130px 0 64px;overflow:hidden;isolation:isolate}
+.hero-cena{position:absolute;inset:0;z-index:-1;overflow:hidden;background:#06080D}
+.hero-img{position:absolute;inset:0;background:url('img/hero.jpg') right center/auto 100% no-repeat;filter:saturate(1.12) contrast(1.04);animation:kb 18s cubic-bezier(.2,.6,.2,1) both;will-change:transform;--iw:calc(100svh * 1.1765);-webkit-mask-image:linear-gradient(90deg,transparent calc(100% - var(--iw)),#000 calc(100% - var(--iw) * .68));mask-image:linear-gradient(90deg,transparent calc(100% - var(--iw)),#000 calc(100% - var(--iw) * .68))}
+@media(max-width:1000px){.hero-img{background-position:center top;background-size:cover;-webkit-mask-image:none;mask-image:none}}
+@keyframes kb{from{transform:scale(1.035)}to{transform:scale(1)}}
+.hero-cena::before{content:"";position:absolute;inset:0;z-index:1;background:
+  linear-gradient(90deg,rgba(6,8,13,.9) 0%,rgba(6,8,13,.62) 38%,rgba(6,8,13,.12) 68%,rgba(6,8,13,.2) 100%),
+  linear-gradient(180deg,rgba(6,8,13,.7) 0%,rgba(6,8,13,0) 26%,rgba(6,8,13,0) 60%,var(--bg) 100%),
+  radial-gradient(80% 70% at 70% 45%,rgba(47,128,255,.22),transparent 70%)}
+.hero-cena::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.09;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.luz{position:absolute;top:-20%;bottom:-20%;left:0;width:26%;z-index:1;background:linear-gradient(100deg,transparent,rgba(130,185,255,.2),transparent);transform:translateX(-140%) skewX(-14deg);animation:varre 8s 1.6s ease-in-out 1 forwards}
+@keyframes varre{to{transform:translateX(520%) skewX(-14deg)}}
+@media(max-width:700px){.hero-cena::before{background:linear-gradient(180deg,rgba(6,8,13,.78) 0%,rgba(6,8,13,.5) 30%,rgba(6,8,13,.86) 72%,var(--bg) 100%),linear-gradient(90deg,rgba(6,8,13,.55),rgba(6,8,13,.25))}}
+@keyframes ent{from{opacity:0;transform:translateY(34px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+.ent{animation:ent 1s cubic-bezier(.2,.7,.2,1) both}
+.e1{animation-delay:.15s}.e2{animation-delay:.3s}.e3{animation-delay:.55s}.e4{animation-delay:.75s}.e5{animation-delay:.95s}
+.hero .env{position:relative;z-index:1;width:100%}
+.hero-grid,.hero-foto{display:block}
+.hero h1{font-size:clamp(48px,10.5vw,104px);max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p.sub{margin-top:20px;font-size:clamp(17px,2.4vw,21px);color:#D2DAE6;max-width:46ch}
+.hero-acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.selos{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.selo{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;background:rgba(14,20,31,.72);border:1px solid var(--linha);font-size:14px;font-weight:500;color:#DCE4EF;backdrop-filter:blur(6px)}
+.selo b{color:var(--lime);font-weight:700}
+.selo .ponto{width:9px;height:9px;border-radius:50%;background:#5c6a80}
+.selo.aberto .ponto{background:var(--lime);box-shadow:0 0 0 4px rgba(155,234,43,.2)}
+
+/* modalidades */
+.foco{display:grid;gap:16px;margin-top:40px}
+@media(min-width:800px){.foco{grid-template-columns:repeat(3,1fr)}}
+.mod{position:relative;background:linear-gradient(180deg,var(--card),#0A101A);border:1px solid var(--linha);border-radius:var(--raio);padding:28px 24px 24px;display:flex;flex-direction:column;overflow:hidden;transition:transform .25s ease,border-color .25s}
+.mod::before{content:attr(data-n);position:absolute;right:16px;top:2px;font:800 96px/1 var(--tit);color:rgba(155,234,43,.07)}
+.mod:hover{transform:translateY(-4px);border-color:rgba(155,234,43,.5)}
+.mod h3{font-size:34px;margin-bottom:10px;position:relative}
+.mod p{color:var(--mut);font-size:16.5px;flex:1;position:relative}
+.mod a{margin-top:20px;display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--lime);font-weight:700;text-decoration:none;position:relative}
+.mod a:hover{gap:12px}
+.outras{display:grid;gap:12px;margin-top:16px}
+@media(min-width:800px){.outras{grid-template-columns:repeat(3,1fr)}}
+.mod.peq{padding:20px 22px}
+.mod.peq h3{font-size:28px}
+.mod.peq::before{font-size:64px}
+
+/* prova social */
+.numeros{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--linha);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+@media(min-width:800px){.numeros{grid-template-columns:repeat(4,1fr)}}
+.num{background:var(--bg);padding:30px 18px;text-align:center}
+.num b{display:block;font:800 clamp(44px,8vw,68px)/1 var(--tit);color:var(--lime)}
+.num span{display:block;margin-top:6px;font-size:14.5px;color:var(--mut)}
+
+/* diferenciais */
+.difs{display:grid;gap:14px;margin-top:40px}
+@media(min-width:700px){.difs{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1050px){.difs{grid-template-columns:repeat(4,1fr)}}
+.dif{padding:26px 22px;border-radius:var(--raio);background:var(--card);border:1px solid var(--linha)}
+.dif .ic{width:52px;height:52px;border-radius:14px;background:rgba(47,128,255,.14);color:#6FA8FF;display:grid;place-items:center;margin-bottom:16px}
+.dif h3{font-size:26px;margin-bottom:6px}
+.dif p{color:var(--mut);font-size:16px}
+
+/* depoimentos */
+.deps{display:grid;gap:14px;margin-top:40px}
+@media(min-width:900px){.deps{grid-template-columns:repeat(3,1fr)}}
+.dep{padding:26px 24px;border-radius:var(--raio);background:var(--card);border:1px solid var(--linha);display:flex;flex-direction:column;gap:16px}
+.estrelas{display:flex;gap:3px;color:var(--lime)}
+.estrelas svg{width:18px;height:18px;fill:currentColor;stroke:none}
+.dep q{font-size:19px;line-height:1.5;quotes:none;color:var(--txt)}
+.dep small{color:var(--mut);font-size:14px;margin-top:auto}
+.avalie{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.g{width:22px;height:22px}
+
+/* avaliações em carrossel */
+.rpista{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 22px 18px;scroll-padding:0 22px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;margin-top:34px}
+.rpista::-webkit-scrollbar{display:none}
+.rc{flex:0 0 min(86vw,390px);scroll-snap-align:start;padding:26px 24px;border-radius:var(--raio);background:var(--card);border:1px solid var(--linha);display:flex;flex-direction:column;gap:16px;min-height:250px}
+.rc q{font-size:20px;line-height:1.5;quotes:none}
+.rc small{color:var(--mut);font-size:14px;margin-top:auto}
+.rc.resumo{background:linear-gradient(150deg,#0F2E6E,#0A1A3D);border-color:#23437F;justify-content:center;text-align:center;align-items:center}
+.rc.resumo b{font:800 84px/1 var(--tit);color:var(--lime)}
+.rc.resumo span{color:#CFDBF2}
+.rc.cta{justify-content:center;align-items:center;text-align:center;border-style:dashed}
+.rc.cta p{color:var(--mut)}
+.barra-c{display:flex;align-items:center;gap:12px;padding:0 22px;max-width:1180px;margin:0 auto}
+/* vídeos (capa + play) */
+.vpista{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 22px 18px;scroll-padding:0 22px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;margin-top:34px}
+.vpista::-webkit-scrollbar{display:none}
+.vid{position:relative;flex:0 0 min(60vw,232px);aspect-ratio:9/16;scroll-snap-align:start;border-radius:18px;overflow:hidden;border:1px solid var(--linha);display:block;text-decoration:none;color:#fff;background:var(--card);transition:transform .25s ease,border-color .25s}
+.vid:hover{transform:translateY(-5px);border-color:rgba(155,234,43,.6)}
+.vid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vid::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 40%,rgba(0,0,0,.78) 100%)}
+.play{position:absolute;left:50%;top:46%;width:62px;height:62px;margin:-31px 0 0 -31px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center;z-index:2;box-shadow:0 10px 30px rgba(0,0,0,.5);transition:transform .2s}
+.vid:hover .play{transform:scale(1.1)}
+.play svg{width:26px;height:26px;fill:currentColor;stroke:none;margin-left:3px}
+.vt{position:absolute;left:14px;right:14px;bottom:14px;z-index:2;font-weight:600;font-size:14.5px;line-height:1.3}
+.vt small{display:block;color:#cfd8e6;font-weight:500;font-size:12px;margin-top:3px}
+.seguir{display:flex;justify-content:center;margin-top:12px}
+.seguir .rede.ig{font-size:16px}
+@media(prefers-reduced-motion:reduce){.ent{animation:none}.hero-img{animation:none;transform:scale(1.03)}.luz{display:none}.vid,.play{transition:none}}
+
+/* galeria */
+.carro{margin-top:36px;position:relative}
+.pista{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 22px 16px;scroll-padding:0 22px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;align-items:center}
+.pista::-webkit-scrollbar{display:none}
+.foto{flex:0 0 auto;scroll-snap-align:center;border-radius:var(--raio);overflow:hidden;border:1px solid var(--linha);background:var(--card)}
+.foto img{--alt:clamp(300px,58vw,460px);aspect-ratio:var(--r);height:min(var(--alt),calc(86vw / var(--r)));width:auto;object-fit:cover}
+.carro-bar{display:flex;align-items:center;gap:12px;padding:0 22px}
+.seta{width:48px;height:48px;border-radius:50%;border:1px solid var(--linha);background:var(--card);color:var(--txt);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s}
+.seta:hover{background:var(--lime);color:var(--ink)}
+.seta:disabled{opacity:.35;cursor:default;background:var(--card);color:var(--txt)}
+.nota-foto{font-size:13.5px;color:var(--mut);margin-left:auto}
+
+/* horários e mapa */
+.duo{display:grid;gap:22px;margin-top:40px}
+@media(min-width:900px){.duo{grid-template-columns:1fr 1.2fr;align-items:stretch}}
+.cx{background:var(--card);border:1px solid var(--linha);border-radius:var(--raio);padding:28px 24px}
+.cx h3{font-size:28px;margin-bottom:16px}
+.hor{list-style:none}
+.hor li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--linha)}
+.hor li:last-child{border-bottom:0}
+.hor b{font-weight:600}
+.hor span{color:var(--mut);text-align:right}
+.hor li.hoje b{color:var(--lime)}
+.contato{margin-top:20px;display:grid;gap:4px}
+.contato a{display:flex;align-items:center;gap:12px;min-height:48px;color:var(--txt);text-decoration:none;font-weight:500}
+.contato a:hover{color:var(--lime)}
+.contato .lb{color:var(--mut);font-weight:400}
+.mapa{border-radius:var(--raio);overflow:hidden;border:1px solid var(--linha);min-height:360px;background:var(--card);position:relative}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.35) contrast(1.05)}
+.mapa .sem{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:24px}
+.mapa.off .sem{display:grid}.mapa.off iframe{display:none}
+
+/* cta final + rodapé */
+.final{position:relative;overflow:hidden;background:linear-gradient(120deg,#0B2A66 0%,#0D1B3D 55%,#06080D 100%);text-align:center}
+.final::after{content:"";position:absolute;inset:auto -10% -55% -10%;height:70%;background:radial-gradient(closest-side,rgba(155,234,43,.22),transparent)}
+.final .env{position:relative;z-index:1}
+.final h2{font-size:clamp(40px,8vw,84px);max-width:16ch;margin:0 auto 16px}
+.final p{color:#CCD7EA;max-width:46ch;margin:0 auto 28px;font-size:18px}
+.redes{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}
+.rede{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:var(--txt);text-decoration:none;font-weight:600;font-size:15px}
+.rede:hover{border-color:var(--lime);color:var(--lime)}
+.rede.ig{background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);border-color:transparent;color:#fff}
+.rede[hidden]{display:none}
+footer{padding:44px 0 34px;border-top:1px solid var(--linha);font-size:14.5px;color:var(--mut)}
+.rod{display:grid;gap:24px}
+@media(min-width:800px){.rod{grid-template-columns:1.2fr 1fr 1fr}}
+.rod img{height:42px;width:auto;margin-bottom:12px}
+.rod b{display:block;color:var(--txt);font-weight:600;margin-bottom:6px}
+.rod a{color:var(--txt);text-decoration:none}
+.copy{margin-top:30px;padding-top:20px;border-top:1px solid var(--linha);font-size:13.5px}
+.copy a{color:var(--lime);text-decoration:none}
+
+/* botão flutuante (celular) */
+.flutua{position:fixed;left:14px;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:70;display:flex}
+.flutua .btn{flex:1;min-height:56px;box-shadow:0 14px 36px rgba(0,0,0,.55)}
+@media(min-width:900px){.flutua{left:auto;right:24px;width:auto}.flutua .btn{padding:0 28px}body{padding-bottom:0}}
+
+@media(min-width:1000px){.rpista,.pista,.vpista{padding-left:max(22px,calc((100vw - 1180px)/2 + 22px));padding-right:max(22px,calc((100vw - 1180px)/2 + 22px));scroll-padding:0 max(22px,calc((100vw - 1180px)/2 + 22px))}}
+/* animação */
+html.anima .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.3,1)}
+html.anima .rv.vis{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}html.anima .rv{opacity:1;transform:none;transition:none}.btn,.mod{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="env">
+    <a class="marca" href="#inicio" aria-label="Pró Fitness, ir para o início"><img src="img/logo.png" alt="Pró Fitness Treinamento Integrado" width="134" height="46"></a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#modalidades">Modalidades</a><a href="#alunos">Alunos</a><a href="#galeria">Espaço</a><a href="#videos">Vídeos</a><a href="#horarios">Horários</a>
+    </nav>
+    <a class="btn btn-lime" id="cta-topo" href="#" target="_blank" rel="noopener">Agendar visita</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="hero-cena" aria-hidden="true"><div class="hero-img" id="hero-img"></div><span class="luz"></span></div>
+  <div class="env">
+    <div class="hero-txt">
+      <p class="rotulo ent e1">Uberaba, MG</p>
+      <h1 class="ent e2">Seu melhor <em>treino</em> começa aqui.</h1>
+      <p class="sub ent e3">Musculação, treinamento funcional e Pilates, com professores que acompanham você de perto. Transformando vidas através do exercício físico.</p>
+      <div class="hero-acoes ent e4">
+        <a class="btn btn-lime" id="cta-hero" href="#" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg>Agendar minha visita</a>
+        <a class="btn btn-line" href="#modalidades">Ver modalidades</a>
+      </div>
+      <div class="selos ent e5" id="selos"></div>
+    </div>
+  </div>
+</section>
+
+<div class="numeros rv" id="numeros" aria-label="A Pró Fitness em números"></div>
+
+<section id="modalidades">
+  <div class="env">
+    <div class="rv"><p class="rotulo">Modalidades</p>
+    <h2 class="titulo">Um treino para <em>cada objetivo</em></h2>
+    <p class="intro">Escolha o que combina com a sua rotina. Fale com a gente e descubra por onde começar.</p></div>
+    <div class="foco rv" id="foco"></div>
+    <div class="outras rv" id="outras"></div>
+  </div>
+</section>
+
+<section id="diferenciais" class="alt">
+  <div class="env">
+    <div class="rv"><p class="rotulo">Por que a Pró Fitness</p>
+    <h2 class="titulo">Cuidado de perto, <em>do primeiro dia</em></h2>
+    <p class="intro">O que os alunos mais elogiam é o que a gente mais cuida.</p></div>
+    <div class="difs rv" id="difs"></div>
+  </div>
+</section>
+
+<section id="alunos">
+  <div class="env">
+    <div class="rv"><p class="rotulo">Quem treina aqui</p>
+    <h2 class="titulo">Alunos <em>aprovam</em></h2>
+    <p class="intro">Comentários reais de alunos no Google.</p></div>
+    </div>
+  <div class="rv">
+    <div class="rpista" id="rpista" tabindex="0" aria-label="Avaliações de alunos"></div>
+    <div class="barra-c">
+      <button class="seta" id="rant" type="button" aria-label="Avaliação anterior"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="seta" id="rprox" type="button" aria-label="Próxima avaliação"><svg class="i" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      <span class="nota-foto" id="rcont">1 / 1</span>
+    </div>
+  </div>
+  <div class="env">
+    <div class="avalie rv">
+      <a class="btn btn-line" id="btn-google" href="#" target="_blank" rel="noopener">
+        <svg class="g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.9 2.4 30.4 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.1 5.5c4.2-3.9 6.6-9.6 6.6-16.9z"/><path fill="#FBBC05" d="M10.5 28.7a14.5 14.5 0 0 1 0-9.4l-7.9-6.1a24 24 0 0 0 0 21.6l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.1-5.5c-2 1.3-4.6 2.1-8.8 2.1-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg>
+        Ver todas as avaliações no Google</a>
+    </div>
+  </div>
+</section>
+
+<section id="galeria" class="alt">
+  <div class="env rv"><p class="rotulo">A academia</p><h2 class="titulo">Conheça o <em>espaço</em></h2></div>
+  <div class="carro rv">
+    <div class="pista" id="pista" tabindex="0" aria-label="Fotos da academia"></div>
+    <div class="barra-c">
+      <button class="seta" id="ant" type="button" aria-label="Foto anterior"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="seta" id="prox" type="button" aria-label="Próxima foto"><svg class="i" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      <span class="nota-foto" id="cont">1 / 1</span>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="env rv"><p class="rotulo">Instagram</p><h2 class="titulo">A rotina <em>em vídeo</em></h2>
+  <p class="intro">Treinos, aulas e bastidores da academia. Toque em um vídeo para assistir no Instagram.</p></div>
+  <div class="rv">
+    <div class="vpista" id="vpista" tabindex="0" aria-label="Vídeos do Instagram"></div>
+    <div class="barra-c">
+      <button class="seta" id="vant" type="button" aria-label="Vídeo anterior"><svg class="i" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="seta" id="vprox" type="button" aria-label="Próximo vídeo"><svg class="i" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      <span class="nota-foto" id="vcont">1 / 1</span>
+    </div>
+    <div class="seguir"><a class="rede ig" id="seguir-ig" href="#" target="_blank" rel="noopener"></a></div>
+  </div>
+</section>
+
+<section id="horarios" class="alt">
+  <div class="env">
+    <div class="rv"><p class="rotulo">Horários e localização</p>
+    <h2 class="titulo">Venha <em>conhecer</em></h2></div>
+    <div class="duo rv">
+      <div class="cx">
+        <h3>Horário de funcionamento</h3>
+        <ul class="hor" id="hor"></ul>
+        <div class="contato" id="contato"></div>
+      </div>
+      <div class="mapa" id="mapa">
+        <iframe title="Mapa da Academia Pró Fitness" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa-if"></iframe>
+        <div class="sem"><a class="btn btn-lime" id="rotas2" href="#" target="_blank" rel="noopener">Abrir rota no Google Maps</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="onde">
+  <div class="env rv">
+    <h2>Dê o primeiro passo hoje</h2>
+    <p>Fale com a gente pelo WhatsApp, tire suas dúvidas sobre planos e valores e agende sua visita.</p>
+    <a class="btn btn-lime" id="cta-final" href="#" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg>Chamar no WhatsApp</a>
+    <div class="redes" id="redes"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="env">
+    <div class="rod">
+      <div><img src="img/logo.png" alt="Pró Fitness Treinamento Integrado" width="123" height="42"><p>Transformando vidas através do exercício físico.</p></div>
+      <div><b>Endereço</b><span id="f-end"></span></div>
+      <div><b>Contato</b><a id="f-tel" href="#"></a><br><a id="f-zap" href="#" target="_blank" rel="noopener"></a></div>
+    </div>
+    <p class="copy">© <span id="ano"></span> Academia Pró Fitness. Todos os direitos reservados. · Desenvolvido por <a href="https://zebubit.com.br" target="_blank" rel="noopener">Zebubit Assessoria</a></p>
+  </div>
+</footer>
+
+<div class="flutua"><a class="btn btn-lime" id="cta-flutua" href="#" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/></svg>Agendar visita pelo WhatsApp</a></div>
+
+<script src="dados.js?v=1"></script>
+<script>
+(function(){
+  var A = ACADEMIA, $ = function(id){return document.getElementById(id)};
+  var IC = {
+    prof:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>',
+    ar:'<path d="M9.6 4.6A2 2 0 1 1 11 8H2M12.6 19.4A2 2 0 1 0 14 16H2M17.7 7.7A2.5 2.5 0 1 1 19.5 12H2"/>',
+    pin:'<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>',
+    hal:'<path d="M6.5 6.5v11M17.5 6.5v11M3 9v6M21 9v6M6.5 12h11"/>',
+    seta:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+    zap:'<path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z"/>',
+    tel:'<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+    rota:'<path d="M3 11l19-9-9 19-2-8-8-2z"/>',
+    ig:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>',
+    fb:'<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>'
+  };
+  var svg = function(k){return '<svg class="i" viewBox="0 0 24 24" aria-hidden="true">'+IC[k]+'</svg>'};
+  var star = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg>';
+
+  /* CTAs principais */
+  ['cta-topo','cta-hero','cta-final','cta-flutua'].forEach(function(id){ $(id).href = zap('quero agendar uma visita na academia.'); });
+  $('btn-google').href = A.google.perfil;
+
+  /* selos do hero */
+  var selos = '<span class="selo"><b>'+A.google.nota+'</b> no Google · '+A.google.avaliacoes+' avaliações</span>';
+  selos += '<span class="selo" id="aberto"><span class="ponto"></span><span id="aberto-t">Segunda a sábado</span></span>';
+  if (PLATAFORMAS.length) selos += '<span class="selo">'+PLATAFORMAS.join(' e ')+'</span>';
+  $('selos').innerHTML = selos;
+
+  /* aberto agora (horário de Brasília) */
+  function agora(){
+    var p = new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date());
+    var g = function(t){return p.filter(function(x){return x.type===t})[0].value};
+    var dias = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return {d:dias[g('weekday')], h:(parseInt(g('hour'),10)%24)+parseInt(g('minute'),10)/60};
+  }
+  var n = agora(), faixas = FUNCIONAMENTO[n.d] || [], aberto = faixas.some(function(f){return n.h>=f[0] && n.h<f[1]});
+  var prox = null;
+  if (!aberto){ faixas.forEach(function(f){ if(prox===null && n.h<f[0]) prox=f[0]; }); }
+  $('aberto').classList.toggle('aberto', aberto);
+  $('aberto-t').textContent = aberto ? 'Aberto agora' : (prox!==null ? 'Fechado agora · abre às '+prox+'h' : 'Fechado hoje');
+
+  /* números */
+  $('numeros').innerHTML =
+    '<div class="num"><b>'+A.google.nota+'</b><span>Nota no Google</span></div>'+
+    '<div class="num"><b>'+A.google.avaliacoes+'</b><span>Avaliações de alunos</span></div>'+
+    '<div class="num"><b>11</b><span>Anos de história</span></div>'+
+    '<div class="num"><b>6</b><span>Dias por semana</span></div>';
+
+  /* modalidades */
+  var ativos = MODALIDADES.filter(function(m){return m.ativo});
+  var card = function(m,i,peq){
+    return '<article class="mod'+(peq?' peq':'')+'" data-n="'+String(i+1).padStart(2,'0')+'"><h3>'+m.nome+'</h3><p>'+m.desc+'</p>'+
+      '<a href="'+zap(m.msg+'.')+'" target="_blank" rel="noopener">Quero conhecer '+svg('seta')+'</a></article>';
+  };
+  $('foco').innerHTML = ativos.filter(function(m){return m.foco}).map(function(m,i){return card(m,i,false)}).join('');
+  var out = ativos.filter(function(m){return !m.foco});
+  $('outras').innerHTML = out.map(function(m,i){return card(m,i+3,true)}).join('');
+  if (!out.length) $('outras').remove();
+
+  /* diferenciais e depoimentos */
+  $('difs').innerHTML = DIFERENCIAIS.map(function(d){return '<div class="dif"><div class="ic">'+svg(d.icone)+'</div><h3>'+d.t+'</h3><p>'+d.d+'</p></div>'}).join('');
+
+  /* horários, contato, mapa */
+  var hoje = {0:'Domingo',6:'Sábado'}[n.d] || 'Segunda a sexta';
+  $('hor').innerHTML = HORARIOS.map(function(h){return '<li'+(h.dia===hoje?' class="hoje"':'')+'><b>'+h.dia+'</b><span>'+h.faixas.join(' · ')+'</span></li>'}).join('');
+  $('contato').innerHTML =
+    '<a href="'+A.rotas+'" target="_blank" rel="noopener">'+svg('pin')+'<span>'+A.endereco+'<br><span class="lb">'+A.bairro+', '+A.cidade+' · CEP '+A.cep+'</span></span></a>'+
+    '<a href="tel:'+A.telefoneLink+'">'+svg('tel')+'<span>'+A.telefone+'</span></a>'+
+    '<a href="'+zap('quero tirar uma dúvida.')+'" target="_blank" rel="noopener">'+svg('zap')+'<span>'+A.whatsappVisivel+' <span class="lb">(WhatsApp)</span></span></a>'+
+    '<a href="'+A.rotas+'" target="_blank" rel="noopener">'+svg('rota')+'<span>Como chegar</span></a>';
+  $('rotas2').href = A.rotas;
+  var mp = $('mapa'), fr = $('mapa-if');
+  if (navigator.onLine === false) mp.classList.add('off'); else fr.src = A.mapaEmbed;
+
+  /* redes e rodapé */
+  var red = '<a class="rede ig" href="'+A.instagram+'" target="_blank" rel="noopener">'+svg('ig')+'Seguir no Instagram</a>';
+  if (A.facebook) red += '<a class="rede" href="'+A.facebook+'" target="_blank" rel="noopener">'+svg('fb')+'Facebook</a>';
+  $('redes').innerHTML = red;
+  $('f-end').innerHTML = A.endereco+'<br>'+A.bairro+', '+A.cidade+'<br>CEP '+A.cep;
+  $('f-tel').textContent = A.telefone; $('f-tel').href = 'tel:'+A.telefoneLink;
+  $('f-zap').textContent = A.whatsappVisivel+' (WhatsApp)'; $('f-zap').href = zap('quero tirar uma dúvida.');
+  $('ano').textContent = new Date().getFullYear();
+
+  /* carrossel genérico: cada item mantém a própria proporção, setas, contador e auto avanço opcional */
+  function carrossel(o){
+    var pista=$(o.pista), ant=$(o.ant), pro=$(o.prox), cont=$(o.cont), it=[].slice.call(pista.children), timer=null, parou=false;
+    function atual(){ var c=pista.scrollLeft+pista.clientWidth/2, m=0, d=1e9; it.forEach(function(el,i){var dd=Math.abs(el.offsetLeft+el.offsetWidth/2-c); if(dd<d){d=dd;m=i}}); return m; }
+    function upd(){ var max=pista.scrollWidth-pista.clientWidth; cont.textContent=(atual()+1)+' / '+it.length; ant.disabled=pista.scrollLeft<=2; pro.disabled=pista.scrollLeft>=max-2; }
+    function alvo(i){ var el=it[i]; var x=o.snap==='start' ? el.offsetLeft-parseFloat(getComputedStyle(pista).paddingLeft) : el.offsetLeft-(pista.clientWidth-el.offsetWidth)/2; pista.scrollTo({left:x,behavior:'smooth'}); }
+    function ir(dir){ var i=Math.min(it.length-1,Math.max(0,atual()+dir)); alvo(i); }
+    ant.onclick=function(){parar();ir(-1)}; pro.onclick=function(){parar();ir(1)};
+    pista.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});
+    pista.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){e.preventDefault();parar();ir(1)} if(e.key==='ArrowLeft'){e.preventDefault();parar();ir(-1)} });
+    ['pointerdown','touchstart','focusin','mouseenter','wheel'].forEach(function(ev){pista.addEventListener(ev,parar,{passive:true})});
+    function parar(){ parou=true; if(timer){clearInterval(timer);timer=null} }
+    if(o.auto && !matchMedia('(prefers-reduced-motion:reduce)').matches){
+      var vis=false; new IntersectionObserver(function(es){vis=es[0].isIntersecting},{threshold:.4}).observe(pista);
+      timer=setInterval(function(){ if(!vis||parou||document.hidden) return; var max=pista.scrollWidth-pista.clientWidth; if(pista.scrollLeft>=max-4) pista.scrollTo({left:0,behavior:'smooth'}); else ir(1); },o.auto);
+    }
+    addEventListener('resize',upd); upd();
+  }
+
+  /* avaliações: resumo + comentários reais + convite */
+  var rp=$('rpista'), r='';
+  r+='<div class="rc resumo"><b>'+A.google.nota+'</b><div class="estrelas" role="img" aria-label="4,6 de 5 estrelas">'+star+star+star+star+star+'</div><span>'+A.google.avaliacoes+' avaliações no Google</span></div>';
+  DEPOIMENTOS.forEach(function(d){ r+='<figure class="rc"><div class="estrelas" role="img" aria-label="5 estrelas">'+star+star+star+star+star+'</div><q>'+d.t+'</q><small>'+d.f+'</small></figure>'; });
+  r+='<div class="rc cta"><p>Treina com a gente? Conte como foi a sua experiência.</p><a class="btn btn-lime" href="'+A.google.perfil+'" target="_blank" rel="noopener">Avaliar no Google</a></div>';
+  rp.innerHTML=r;
+  carrossel({pista:'rpista',ant:'rant',prox:'rprox',cont:'rcont',snap:'start',auto:5500});
+
+  /* galeria do espaço */
+  var pista=$('pista');
+  GALERIA.forEach(function(g,i){
+    var f=document.createElement('div'); f.className='foto';
+    f.innerHTML='<img src="'+g.src+'" alt="'+g.alt+'" style="--r:'+g.r+'" width="'+Math.round(460*g.r)+'" height="460"'+(i>1?' loading="lazy"':'')+' decoding="async">';
+    pista.appendChild(f);
+  });
+  carrossel({pista:'pista',ant:'ant',prox:'prox',cont:'cont'});
+
+  /* vídeos do Instagram: capa + play */
+  var vp=$('vpista'), v='';
+  REELS.forEach(function(x,i){
+    v+='<a class="vid" href="https://www.instagram.com/reel/'+x.id+'/" target="_blank" rel="noopener" aria-label="Assistir no Instagram: '+x.t+'">'+
+       '<img src="img/reels/'+x.id+'.jpg" alt="" width="540" height="960"'+(i>1?' loading="lazy"':'')+' decoding="async">'+
+       '<span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg></span>'+
+       '<span class="vt">'+x.t+'<small>Assistir no Instagram</small></span></a>';
+  });
+  vp.innerHTML=v;
+  carrossel({pista:'vpista',ant:'vant',prox:'vprox',cont:'vcont',snap:'start'});
+  var sg=$('seguir-ig'); sg.href=A.instagram; sg.innerHTML=svg('ig')+'Seguir '+A.arroba;
+
+  /* topo ao rolar */
+  var cab = $('topo'); addEventListener('scroll',function(){cab.classList.toggle('rolou',scrollY>20)},{passive:true});
+
+  /* revelar ao rolar, com rede de segurança */
+  var rv = [].slice.call(document.querySelectorAll('.rv'));
+  var reduz = matchMedia('(prefers-reduced-motion:reduce)').matches || !('IntersectionObserver' in window);
+  if (!reduz){
+    document.documentElement.classList.add('anima');
+    var obs = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+    rv.forEach(function(e){obs.observe(e)});
+    setTimeout(function(){ if(!rv.some(function(e){return e.classList.contains('vis')})) rv.forEach(function(e){e.classList.add('vis')}); },2500);
+  }
+})();
+</script>
+</body>
+</html>
